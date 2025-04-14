@@ -3,9 +3,9 @@ from openai import OpenAI
 
 client = OpenAI(api_key=st.secrets.get("OPENAI_API_KEY") or st.text_input("API Key", type="password"))
 
-st.title("🏭 DX演習MCPチャット（柴田製鋲所）")
+st.title("🏭 偉人大集合")
 
-characters = ["真鍋", "社長", "副社長", "営業担当", "生産担当", "IT担当"]
+characters = ["織田信長", "紫式部", "坂本龍馬", "AI忍者", "高校生代表", "一般人"]
 selected_role = st.selectbox("キャラを選んで発言：", characters)
 
 if "messages" not in st.session_state:
